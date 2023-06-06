@@ -1,0 +1,71 @@
+{% extends "/base.twig" %}
+
+{% block head %}
+	<link rel="stylesheet" href="/css/home.css">
+{% endblock %}
+
+{% block title %}
+	<title>TeamSync - Inscription</title>
+{% endblock %}
+
+{% block content %}
+	<body>
+		<header class="md:relative text-gray-700 body-font">
+			<div class="md:fixed top-0 left-0 right-0 container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center border-b border-gray-200">
+				<a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="/" target="_blank">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewbox="0 0 24 24">
+						<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+					</svg>
+					<span class="ml-3 text-xl">Team.Sync</span>
+				</a>
+				<nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+					<a class="md:mr-8 hover:text-gray-900 cursor-pointer" href="/">Accueil</a>
+				</nav>
+				<a class="inline-flex items-center bg-gray-500 border-0 py-2 px-4 focus:outline-none hover:bg-gray-700 rounded text-white mt-4 md:mt-0" href="/login" target="_blank">Mon compte
+					<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewbox="0 0 24 24">
+						<path d="M5 12h14M12 5l7 7-7 7"></path>
+					</svg>
+				</a>
+			</div>
+		</header>
+
+		<section class="h-screen mx-auto flex justify-center items-center text-gray-600 body-font">
+
+				{# Inscription #}
+				<div class="2xl:w-1/4 lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-5 w-full mt-10 md:mt-0">
+					<h2 class="text-center text-gray-900 text-lg font-medium title-font mb-5">S'inscrire</h2>
+					<form action="/inscription" method="POST">
+						<div class="relative mb-4">
+							<label for="name" class="leading-7 text-sm text-gray-600">Nom</label>
+							<input type="text" id="name" name="name" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+							<p class="mt-3 text-red-600">{{ error.name.message }}</p>
+						</div>
+						<div class="relative mb-4">
+							<label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+							<input type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+							<p class="mt-3 text-red-600">{{ error.email.message }}</p>
+						</div>
+						<div class="relative mb-4">
+							<label for="siret" class="leading-7 text-sm text-gray-600">Numéro SIRET</label>
+							<input type="number" id="siret" name="siret" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+							<p class="mt-3 text-red-600">{{ error.siret.message }}</p>
+						</div>
+						<div class="relative mb-4">
+							<label for="directeur" class="leading-7 text-sm text-gray-600">Nom du directeur</label>
+							<input type="text" id="directeur" name="directeur" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+							<p class="mt-3 text-red-600">{{ error.directeur.message }}</p>
+						</div>
+						<div class="relative mb-4">
+							<label for="password" class="leading-7 text-sm text-gray-600">Mot de passe</label>
+							<input type="password" id="password" name="password" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+							<p class="mt-3 text-red-600">{{ error.password.message }}</p>
+						</div>
+						<button type="submit" class="w-full text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Valider</button>
+					</form>
+					<p class="text-xs text-gray-500 mt-3">Veuillez remplir tous les champs pour compléter votre inscription.</p>
+				</div>
+
+			</div>
+		</section>
+	</body>
+{% endblock %}

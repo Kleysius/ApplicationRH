@@ -1,0 +1,27 @@
+<!-- Modale pour ajouter un employé -->
+<div id="editEmployeeModal" class="hidden fixed z-50 inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+	<div class="relative flex flex-col bg-white rounded-lg p-6 w-80">
+		<h2 class="text-xl font-semibold mb-4">Modifier l'employé</h2>
+		<!-- Formulaire pour ajouter un employé -->
+		<form id="editEmployeeForm" method="post" enctype="multipart/form-data">
+			<div>
+				<label class="block mb-2 text-sm font-medium text-gray-600" for="photo">Photo du nouveau</label>
+				<input class="block w-full text-sm text-gray-900 cursor-pointer bg-gray-50 focus:outline-none" type="file" name="photo" id="modif-photo" value="{{employe.photo}}">
+			</div>
+			<div>
+				<label for="nom" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nom</label>
+				<input type="text" name="nom" id="modif-nom" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Nom et Prénom de l'employé" required value="{{employe.nom}}">
+			</div>
+			<div>
+				<label for="fonction" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Fonction</label>
+				<input type="text" name="fonction" id="modif-fonction" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Sa fonction" required value="{{employe.fonction}}">
+			</div>
+			<button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg mt-4 hover:bg-blue-600">Modifier</button>
+		</form>
+		<button class="closeModalButton text-gray-500 hover:text-gray-700 absolute top-3 right-3 focus:outline-none">
+			<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+				<path fill-rule="evenodd" d="M2.646 2.646a.5.5 0 01.708 0L10 9.293l6.646-6.647a.5.5 0 11.708.708L10.707 10l6.647 6.646a.5.5 0 11-.708.708L10 10.707l-6.646 6.647a.5.5 0 01-.708-.708L9.293 10 2.646 3.354a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+			</svg>
+		</button>
+	</div>
+</div>
