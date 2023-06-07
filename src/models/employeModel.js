@@ -6,9 +6,25 @@ const employeSchema = new mongoose.Schema({
     },
     nom: {
         type: String,
+        required: [true, 'Le nom est obligatoire'],
+        validator: {
+            validate: function (value) {
+                return /^[a-zA-Z]+$/.test(value);
+            }
+        }
     },
     fonction: {
         type: String,
+        required: [true, 'La fonction est obligatoire'],
+        validator: {
+            validate: function (value) {
+                return /^[a-zA-Z]+$/.test(value);
+            }
+        }
+    },
+    blame: {
+        type: Number,
+        default: 0,
     },
     entreprise: {
         type: mongoose.Schema.Types.ObjectId,

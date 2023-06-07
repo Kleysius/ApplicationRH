@@ -8,14 +8,14 @@
 		<form id="addEmployeeForm" action="/addEmploye" method="post" enctype="multipart/form-data">
 			<div>
 				<label class="block mb-2 text-sm font-medium text-gray-600" for="photo">Photo du nouveau</label>
-				<input class="block w-full text-sm text-gray-900 cursor-pointer bg-gray-50 focus:outline-none" type="file" name="photo" id="photo" {% if employe %} value="{{employe.photo}}" {% endif %}>
+				<input class="block w-full text-sm text-gray-900 rounded-lg cursor-pointer bg-gray-50 focus:outline-none" type="file" name="photo" id="photo" {% if employe %} value="{{employe.photo}}" {% endif %}>
 			</div>
 			<div>
-				<label for="nom" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nom</label>
+				<label for="nom" class="block my-2 text-sm font-medium text-gray-900">Nom</label>
 				<input type="text" name="nom" id="nom" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Nom et Prénom de l'employé" required {% if employe %} value="{{employe.nom}}" {% endif %}>
 			</div>
 			<div>
-				<label for="fonction" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Fonction</label>
+				<label for="fonction" class="block my-2 text-sm font-medium text-gray-900">Fonction</label>
 				<input type="text" name="fonction" id="fonction" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Sa fonction" required {% if employe %} value="{{employe.fonction}}" {% endif %}>
 			</div>
 			<button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg mt-4 hover:bg-blue-600">

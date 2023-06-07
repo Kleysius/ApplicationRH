@@ -1,0 +1,71 @@
+<header class="border-b border-gray-200">
+	<nav class="bg-white border-gray-200 px-4 lg:px-6 py-4">
+		<div class="flex flex-wrap justify-between items-center">
+			<div class="flex justify-start items-center">
+				<button id="toggleSidebar" aria-expanded="true" aria-controls="sidebar" class="hidden p-2 mr-3 text-gray-600 rounded cursor-pointer lg:inline hover:text-gray-900 hover:bg-gray-100">
+					<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+					</svg>
+				</button>
+
+				<a class="flex title-font font-medium items-center text-gray-900 mr-4 md:mb-0" href="/" target="_blank">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewbox="0 0 24 24">
+						<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+					</svg>
+					<span class="ml-3 text-xl">Team.Sync</span>
+				</a>
+				<form action="#" method="GET" class="hidden lg:block lg:pl-2">
+					<label for="search" class="sr-only">Search</label>
+					<div class="relative mt-1 lg:w-96">
+						<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+							<svg class="w-5 h-5 text-gray-500" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+							</svg>
+						</div>
+						<input type="text" name="search" id="search" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2.5" placeholder="Rechercher un employé">
+					</div>
+				</form>
+				<a class="flex justify-center items-center cursor-pointer" href="/dashboard" target="_blank">
+					<svg class="w-6 h-6 ml-2 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"></path>
+					</svg>
+				</a>
+			</div>
+			<div class="flex items-center lg:order-2">
+				<button id="toggleSidebarMobileSearch" type="button" class="p-2 text-gray-500 rounded-lg lg:hidden hover:text-gray-900 hover:bg-gray-100">
+					<span class="sr-only">Search</span>
+					<!-- Search icon -->
+					<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+					</svg>
+				</button>
+
+				<button type="button" class="flex mx-3 text-sm rounded-lg focus:ring-2 focus:ring-gray-400 md:mr-0" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="dropdown">
+					<span class="sr-only">Open user menu</span>
+					<img class="w-12 h-12 rounded-lg" src="https://flowbite.com/docs/images/people/profile-picture-2.jpg" alt="user photo">
+				</button>
+				<!-- Dropdown menu -->
+				<div class="hidden z-50 my-4 w-56 text-base list-none bg-white rounded divide-y divide-gray-100 shadow" id="dropdown">
+					<div class="py-3 px-4">
+						<span class="block text-sm font-semibold text-gray-900 dark:text-white">{{user.name}}</span>
+						<span class="block text-sm font-light text-gray-500 truncate dark:text-gray-400">{{user.email}}</span>
+					</div>
+					<ul class="py-1 font-light text-gray-500" aria-labelledby="dropdown">
+						<li>
+							<a href="#" class="block py-2 px-4 text-sm hover:bg-gray-100">Mon profil</a>
+						</li>
+						<li>
+							<a href="#" class="block py-2 px-4 text-sm hover:bg-gray-100">Paramètres du compte</a>
+						</li>
+					</ul>
+
+					<ul class="py-1 font-bold text-red-500" aria-labelledby="dropdown">
+						<li>
+							<a href="/logout" class="block py-2 px-4 text-sm hover:bg-red-100">Déconnexion</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>

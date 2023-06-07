@@ -10,6 +10,18 @@ const storage = multer.diskStorage({
     }
 });
 
-const upload = multer({ storage: storage });
+// ajouter filtre uniquement image type png / jpeg etc
+const imageFilter = (req, file, cb) => {
+    if (file.mimetype.startsWith('image')) {
+        cb(null, true);
+    } else {
+        cb('Seules les images sont autorisées !', false);
+    }
+};
+
+const upload = multer({ 
+    storage: storage,
+    fileFilter: imageFilter
+});
 
 module.exports = upload;
