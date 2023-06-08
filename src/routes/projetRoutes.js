@@ -23,7 +23,14 @@ projetRouter.get('/dashboard', authGuard, async (req, res) => {
     try {
         let employes = null
         if (req.query.search) {
-            employes = await employeModel.find({ entreprise: req.session.userId, nom: { $regex: req.query.search, $options: 'i' } });
+            // rechercher les employés par nom ou fonction
+            employes = await employeModel.find({
+                entreprise: req.session.userId,
+                $or: [
+                    { nom: { $regex: req.query.search, $options: 'i' } },
+                    { fonction: { $regex: req.query.search, $options: 'i' } }
+                ]
+            })
         } else {
             employes = await employeModel.find({ entreprise: req.session.userId });
         }
@@ -94,6 +101,7 @@ projetRouter.get('/blame/:id', async (req, res) => {
         let nbBlame = employe.blame + 1;
         if (nbBlame >= 3) {
             await employeModel.deleteOne({ _id: req.params.id });
+            fs.unlinkSync(path.join(`src/public/photo/${employe.photo}`));
         } else {
             await employeModel.updateOne({ _id: req.params.id }, { blame: nbBlame });
         }

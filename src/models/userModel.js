@@ -10,9 +10,11 @@ const userSchema = new mongoose.Schema({
                 // regex avec Au moins une lettre minuscule ((?=.*[a-z]))
                 // Au moins une lettre majuscule ((?=.*[A-Z]))
                 // regex avec les accents ((?=.*[À-ÿ]))
-                return /^[a-zA-ZÀ-ÿ]+$/.test(value);
+                // regex espaces acceptés ((?=.*\s))
+                // chiffres acceptés ((?=.*\d))
+                return /^[a-zA-ZÀ-ÿ\s\d]+$/.test(value);
             },
-            message: 'Le nom doit contenir uniquement des lettres'
+            message: 'Le nom peut contenir uniquement des lettres, des chiffres et des espaces'
         }
     },
     email: {
@@ -46,9 +48,9 @@ const userSchema = new mongoose.Schema({
         trim: true, // supprime les espaces avant et après
         validate: {
             validator: function (value) {
-                return /^[a-zA-Z]+$/.test(value);
+                return /^[a-zA-ZÀ-ÿ\s\d]+$/.test(value);
             },
-            message: 'Le nom du directeur doit contenir uniquement des lettres'
+            message: 'Le nom peut contenir uniquement des lettres, des chiffres et des espaces'
         }
     },
     password: {

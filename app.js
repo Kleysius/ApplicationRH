@@ -27,7 +27,7 @@ app.use(session({
 
 app.use(function (req, res, next) {
     // res.locals.session = req.session;
-    req.session.userId = "648080aa5f1e063a81d8cea6";
+    req.session.userId = "6481872fcda42d1de19af1bf";
     next();
 });
 
