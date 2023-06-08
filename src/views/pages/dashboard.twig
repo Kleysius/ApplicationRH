@@ -50,13 +50,13 @@
 						<div class="dropdownE shadow-md z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg w-44">
 							<ul class="py-2" aria-labelledby="dropdownButton">
 								<li>
-									<div data-employee='{{employe | json_encode | escape}}' data-employeeid={{employe.id}} class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer" onclick="openModalModify(this)">Modifier</div>
+									<div data-employee='{{employe | json_encode | escape}}' data-employeeId={{employe.id}} class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer" onclick="openModalModify(this)">Modifier</div>
 								</li>
 								<li>
 									<a href="/blame/{{employe.id}}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Blâmer</a>
 								</li>
 								<li>
-									<a href="#" data-employeeid={{employe.id}} class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100" onclick="confirmDelete(this)">Supprimer</a>
+									<a href="#" data-employeeId={{employe.id}} class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100" onclick="confirmDelete(this)">Supprimer</a>
 								</li>
 							</ul>
 						</div>

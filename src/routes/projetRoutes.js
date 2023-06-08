@@ -5,7 +5,6 @@ const upload = require('../services/multer.js');
 const fs = require('fs');
 const path = require('path');
 
-
 const employeModel = require('../models/employeModel.js');
 const authGuard = require('../services/authGuard.js');
 
@@ -88,6 +87,7 @@ projetRouter.post('/updateEmploye/:id', upload.single('photo'), async (req, res)
             }
             await employeModel.updateOne({ _id: req.params.id }, { photo: req.file.filename });
         }
+        await employeModel.updateOne({ _id: req.params.id }, req.body);
         res.redirect('/dashboard');
     } catch (error) {
         res.send(error);
