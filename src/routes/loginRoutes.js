@@ -27,7 +27,7 @@ loginRouter.post('/login', async (req, res) => {
                 throw errors;
             }
         } else {
-            errors.email = 'L\'email est incorrect';
+            errors.email = 'L\'email est incorrect ou inexistant';
             throw errors;
         }
     } catch (error) {
