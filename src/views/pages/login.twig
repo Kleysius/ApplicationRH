@@ -9,36 +9,28 @@
 {% endblock %}
 
 {% block content %}
-	<body>
-
-		{% include "/layouts/headerHome.twig" %}
-
-		<section
-			class="h-screen mx-auto flex justify-center items-center text-gray-600 body-font">
-
-			{# Connexion #}
-			<div class="relative mb-12 lg:mb-0">
-				<div id="radius-shape-1" class="absolute rounded-full shadow-lg"></div>
-				<div id="radius-shape-2" class="absolute shadow-lg"></div>
-				<div class="relative bg-[hsla(0,0%,100%,0.9)] backdrop-blur-[25px] backdrop-saturate-[200%] block rounded-lg px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] md:px-12">
-					<h2 class="text-center text-gray-900 text-lg font-medium title-font mb-5">Se connecter</h2>
-					<form action="/login" method="POST">
-						<div class="relative mb-4">
-							<label for="email" class="leading-7 text-sm text-gray-600">Email</label>
-							<input type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-							<p class="text-red-600 mt-1">{{ error.email }}</p>
-						</div>
-						<div class="relative mb-4">
-							<label for="password" class="leading-7 text-sm text-gray-600">Mot de passe</label>
-							<input type="password" id="password" name="password" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-							<p class="text-red-600 mt-1">{{ error.password }}</p>
-						</div>
-						<button type="submit" class="w-full text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Connexion</button>
-					</form>
-					<p class="text-xs text-gray-500 mt-3">Veuillez saisir votre email et votre mot de passe pour vous connecter.</p>
-				</div>
+	{% include "/layouts/headerHome.twig" %}
+	<section class="h-screen mx-auto flex justify-center items-center text-gray-600 body-font">
+		<div class="relative mb-12 lg:mb-0">
+			<div id="radius-shape-1" class="absolute rounded-full shadow-lg"></div>
+			<div id="radius-shape-2" class="absolute shadow-lg"></div>
+			<div class="relative bg-[hsla(0,0%,100%,0.9)] backdrop-blur-[25px] backdrop-saturate-[200%] block rounded-lg px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] md:px-12">
+				<h2 class="text-center text-gray-900 text-lg font-medium title-font mb-5">Se connecter</h2>
+				<form action="/login" method="POST">
+					<div class="relative mb-4">
+						<label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+						<input type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+						<p class="text-red-600 mt-1">{{ error.email }}</p>
+					</div>
+					<div class="relative mb-4">
+						<label for="password" class="leading-7 text-sm text-gray-600">Mot de passe</label>
+						<input type="password" id="password" name="password" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+						<p class="text-red-600 mt-1">{{ error.password }}</p>
+					</div>
+					<button type="submit" class="w-full text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Connexion</button>
+				</form>
+				<p class="text-xs text-gray-500 mt-3">Veuillez saisir votre email et votre mot de passe pour vous connecter.</p>
 			</div>
-
-		</section>
-	</body>
+		</div>
+	</section>
 {% endblock %}

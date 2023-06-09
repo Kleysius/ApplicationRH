@@ -10,26 +10,26 @@
 
 {% block content %}
 	{% include "/layouts/headerHome.twig" %}
-	<section class="h-screen flex justify-center items-center bg-white dark:bg-gray-900">
+	<section class="h-screen flex justify-center items-center bg-white">
 		<div class="relative">
 			<div id="radius-shape" class="absolute hidden lg:block shadow-lg"></div>
 			<div class="relative py-8 lg:py-16 px-4 mx-auto max-w-screen-md bg-[hsla(0,0%,100%,0.9)] backdrop-blur-[25px] backdrop-saturate-[200%] rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
-				<h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Nous contacter</h2>
-				<p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 text-sm sm:text-lg">Vous avez un problème technique ? Vous souhaitez nous faire part de vos commentaires ? Vous avez besoin de détails sur notre plan d'affaires ? N'hésitez pas à nous contacter.</p>
+				<h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900">Nous contacter</h2>
+				<p class="mb-8 lg:mb-16 font-light text-center text-gray-500 text-sm sm:text-lg">Vous avez un problème technique ? Vous souhaitez nous faire part de vos commentaires ? Vous avez besoin de détails sur notre plan d'affaires ? N'hésitez pas à nous contacter.</p>
 				<form action="#" class="space-y-8">
 					<div>
-						<label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Votre email</label>
-						<input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-indigo-500 dark:focus:border-indigo-500 dark:shadow-sm-light" placeholder="name@team-sync.com" required>
+						<label for="email" class="block mb-2 text-sm font-medium text-gray-900">Votre email</label>
+						<input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5" placeholder="name@team-sync.com" required>
 					</div>
 					<div>
-						<label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Sujet</label>
-						<input type="text" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-indigo-500 dark:focus:border-indigo-500 dark:shadow-sm-light" placeholder="Faites-nous savoir comment nous pouvons vous aider" required>
+						<label for="subject" class="block mb-2 text-sm font-medium text-gray-900">Sujet</label>
+						<input type="text" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500" placeholder="Faites-nous savoir comment nous pouvons vous aider" required>
 					</div>
 					<div class="sm:col-span-2">
-						<label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Votre message</label>
-						<textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-indigo-500 dark:focus:border-indigo-500" placeholder="Laisser un commentaire..."></textarea>
+						<label for="message" class="block mb-2 text-sm font-medium text-gray-900">Votre message</label>
+						<textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Laisser un commentaire..."></textarea>
 					</div>
-					<button type="submit" class="py-3 px-8 text-sm font-medium text-center text-white rounded-lg bg-indigo-700 sm:w-fit hover:bg-indigo-800 focus:ring-4 focus:outline-none focus:ring-indigo-300 dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-800">Envoyer</button>
+					<button type="submit" class="py-3 px-8 text-sm font-medium text-center text-white rounded-lg bg-indigo-700 sm:w-fit hover:bg-indigo-800 focus:ring-4 focus:outline-none focus:ring-indigo-300">Envoyer</button>
 				</form>
 			</div>
 		</div>
