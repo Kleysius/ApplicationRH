@@ -127,4 +127,26 @@ projetRouter.get('/deleteEmploye/:id', async (req, res) => {
     }
 });
 
+// route pour créer la page contact
+projetRouter.get('/contact', (req, res) => {
+    try {
+        res.render('pages/contact.twig', {
+            action: "contact"
+        });
+    } catch (error) {
+        console.log(error);
+    }
+});
+
+// route pour créer la page à propos
+projetRouter.get('/about', (req, res) => {
+    try {
+        res.render('pages/about.twig', {
+            action: "about"
+        });
+    } catch (error) {
+        console.log(error);
+    }
+});
+
 module.exports = projetRouter;
