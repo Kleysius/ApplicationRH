@@ -8,7 +8,8 @@
 		<form id="addEmployeeForm" action="/addEmploye" method="post" enctype="multipart/form-data">
 			<div>
 				<label class="block mb-2 text-sm font-medium text-gray-600" for="photo">Photo du nouveau</label>
-				<input class="block w-full text-sm text-gray-900 rounded-lg cursor-pointer bg-gray-50 focus:outline-none" type="file" name="photo" id="photo" {% if employe %} value="{{employe.photo}}" {% endif %}>
+				<input class="file-input block w-full text-sm text-gray-900 rounded-lg cursor-pointer bg-gray-50 focus:outline-none" type="file" name="photo" id="photo" {% if employe %} value="{{employe.photo}}" {% endif %}>
+				<img class="preview-image hidden h-20 w-20 mt-2 object-cover shadow-lg rounded-lg mx-auto" src="#" alt="{{employe.nom}}">
 			</div>
 			<div>
 				<label for="nom" class="block my-2 text-sm font-medium text-gray-900">Nom</label>
