@@ -19,22 +19,22 @@
 				<form action="/inscription" method="POST">
 					<div class="relative mb-4">
 						<label for="name" class="leading-7 text-sm text-gray-600">Raison sociale</label>
-						<input type="text" id="name" name="name" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+						<input type="text" id="name" name="name" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" value="{{user.name}}">
 						<p class="mt-3 text-red-600">{{ error.name.message }}</p>
 					</div>
 					<div class="relative mb-4">
 						<label for="email" class="leading-7 text-sm text-gray-600">Email</label>
-						<input type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+						<input type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" value="{{user.email}}">
 						<p class="mt-3 text-red-600">{{ error.email.message }}</p>
 					</div>
 					<div class="relative mb-4">
 						<label for="siret" class="leading-7 text-sm text-gray-600">Numéro SIRET</label>
-						<input type="number" id="siret" name="siret" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+						<input type="number" id="siret" name="siret" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" value="{{user.siret}}">
 						<p class="mt-3 text-red-600">{{ error.siret.message }}</p>
 					</div>
 					<div class="relative mb-4">
 						<label for="directeur" class="leading-7 text-sm text-gray-600">Nom du directeur</label>
-						<input type="text" id="directeur" name="directeur" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+						<input type="text" id="directeur" name="directeur" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" value="{{user.directeur}}">
 						<p class="mt-3 text-red-600">{{ error.directeur.message }}</p>
 					</div>
 					<div class="relative mb-4">

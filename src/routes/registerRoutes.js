@@ -20,7 +20,7 @@ registerRouter.post('/inscription', async (req, res) => {
         let err = newUser.validateSync();
         if (err) {
             console.log(err);
-            res.render('pages/register.twig', { error: err.errors });
+            res.render('pages/register.twig', { error: err.errors, user: req.body });
             return;
         }
         newUser.password = bcrypt.hashSync(req.body.password, 10);

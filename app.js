@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
-// Configuration de la session avec la clé secrète générée
+// Configuration de la session avec la clé secrète
 app.use(session({
     secret: process.env.SECRET_KEY,
     resave: false,
@@ -26,8 +26,8 @@ app.use(session({
 }));
 
 app.use(function (req, res, next) {
-    // res.locals.session = req.session;
-    req.session.userId = "647f0455a603900602dfbf9e";
+    res.locals.session = req.session;
+    // req.session.userId = "647f0455a603900602dfbf9e";
     next();
 });
 
