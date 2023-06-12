@@ -22,7 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(session({
     secret: process.env.SECRET_KEY,
     resave: false,
-    saveUninitialized: false,
+    saveUninitialized: true,
 }));
 
 app.use(function (req, res, next) {

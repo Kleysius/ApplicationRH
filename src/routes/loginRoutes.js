@@ -32,7 +32,7 @@ loginRouter.post('/login', async (req, res) => {
         }
     } catch (error) {
         console.log(error);
-        res.render('pages/login.twig', { error: error });
+        res.render('pages/login.twig', { error: error, user: req.body });
     }
 });
 
