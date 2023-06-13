@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.background-radial-gradient {
+    background-color: hsl(218, 41%, 15%);
+    background-image: radial-gradient(650px circle at 0% 0%,
+            hsl(218, 41%, 35%) 15%,
+            hsl(218, 41%, 30%) 35%,
+            hsl(218, 41%, 20%) 75%,
+            hsl(218, 41%, 19%) 80%,
+            transparent 100%),
+        radial-gradient(1250px circle at 100% 100%,
+            hsl(218, 41%, 45%) 15%,
+            hsl(218, 41%, 30%) 35%,
+            hsl(218, 41%, 20%) 75%,
+            hsl(218, 41%, 19%) 80%,
+            transparent 100%);
+}
+
+#radius-shape-1 {
+    height: 220px;
+    width: 220px;
+    top: -60px;
+    left: -130px;
+    background: radial-gradient(#37006b, #841fff);
+    overflow: hidden;
+    animation: float1 12s ease-in-out infinite;
+}
+
+#radius-shape-2 {
+    border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+    bottom: -60px;
+    right: -110px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(#1e006b, #5f1fff);
+    overflow: hidden;
+    animation: float2 14s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+#radius-shape-3 {
+    border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+    top: 10px;
+    left: -200px;
+    width: 260px;
+    height: 260px;
+    background: radial-gradient(#20006b, #4c1fff);
+    overflow: hidden;
+    animation: float2 14s ease-in-out infinite;
+}
+
+@keyframes float1 {
+    0% {
+        transform: translate(0px, 0px);
+        border-radius: 50%;
+    }
+    33% {
+        transform: translate(0px, 15px);
+        border-radius: 45% 55% 65% 35% / 55% 45% 55% 45%;
+    }
+    66% {
+        transform: translate(0px, -15px);
+        border-radius: 55% 45% 35% 65% / 45% 55% 45% 55%;
+    }
+    100% {
+        transform: translate(0px, 0px);
+        border-radius: 50%;
+    }
+}
+
+@keyframes float2 {
+    0% {
+        transform: translate(0px, 0px);
+        border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+    }
+    33% {
+        transform: translate(0px, -15px);
+        border-radius: 35% 65% 65% 35% / 55% 45% 55% 45%;
+    }
+    66% {
+        transform: translate(0px, 15px);
+        border-radius: 65% 35% 35% 65% / 45% 55% 45% 55%;
+    }
+    100% {
+        transform: translate(0px, 0px);
+        border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+    }
+}
